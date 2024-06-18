@@ -34,6 +34,7 @@ Changes for maven's settings.xml can be find in project root settings.xml file.
 
 
 ### CI/CD pipeline
+https://bitbucket.org/blog/announcing-support-for-linux-arm-runners-in-bitbucket-pipelines
 //todo: add details how to build/deploy native Java built application
 
 
