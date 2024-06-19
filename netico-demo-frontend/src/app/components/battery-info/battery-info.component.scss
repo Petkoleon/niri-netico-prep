@@ -1,7 +1,7 @@
 @import "variables";
 
 .battery-info {
-  font-family: 'Poppins', sans-serif;
+  font-family: $base-font-family;
   font-weight: lighter;
   background: $color-white-smoke;
   color: $color-dim-gray;

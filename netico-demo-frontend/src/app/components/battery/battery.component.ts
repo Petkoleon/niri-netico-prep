@@ -1,8 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ControlItemComponent} from "@components/control-item/control-item.component";
 import {BaseComponent} from "@core/directives/base-component.directive";
 import {JsonPipe, KeyValuePipe, NgOptimizedImage} from "@angular/common";
-import {ControlButtonComponent} from "@components/control-button/control-button.component";
+import {NumberInputComponent} from "@components/number-input/number-input.component";
 import {Battery} from "@interfaces/states/battery-state.interface";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 
@@ -10,9 +9,8 @@ import {FaIconComponent} from "@fortawesome/angular-fontawesome";
   selector: 'app-battery',
   standalone: true,
   imports: [
-    ControlItemComponent,
     KeyValuePipe,
-    ControlButtonComponent,
+    NumberInputComponent,
     FaIconComponent,
     NgOptimizedImage,
     JsonPipe

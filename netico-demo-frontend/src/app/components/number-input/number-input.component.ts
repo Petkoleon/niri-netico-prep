@@ -3,7 +3,6 @@ import {DecimalPipe} from "@angular/common";
 import {
   AbstractControl,
   FormBuilder,
-  FormControl,
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
@@ -11,17 +10,17 @@ import {
 } from "@angular/forms";
 
 @Component({
-  selector: 'app-control-button',
+  selector: 'app-number-input',
   standalone: true,
   imports: [
     DecimalPipe,
     ReactiveFormsModule,
     FormsModule
   ],
-  templateUrl: './control-button.component.html',
-  styleUrl: './control-button.component.scss'
+  templateUrl: './number-input.component.html',
+  styleUrl: './number-input.component.scss'
 })
-export class ControlButtonComponent implements OnInit {
+export class NumberInputComponent implements OnInit {
   fb = inject(FormBuilder);
   @Input() item: { label: string, value: number, disabled?: boolean };
   @Output() valueSubmitted = new EventEmitter();

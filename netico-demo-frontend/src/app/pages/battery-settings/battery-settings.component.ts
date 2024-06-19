@@ -7,7 +7,7 @@ import {BatteryService} from "@api/services/battery.service";
 import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Battery} from "@interfaces/states/battery-state.interface";
 import {DecimalPipe, JsonPipe, KeyValuePipe} from "@angular/common";
-import {ControlButtonComponent} from "@components/control-button/control-button.component";
+import {NumberInputComponent} from "@components/number-input/number-input.component";
 
 @Component({
   selector: 'app-battery-settings',
@@ -17,7 +17,7 @@ import {ControlButtonComponent} from "@components/control-button/control-button.
     KeyValuePipe,
     JsonPipe,
     DecimalPipe,
-    ControlButtonComponent,
+    NumberInputComponent,
     RouterLink
   ],
   templateUrl: './battery-settings.component.html',

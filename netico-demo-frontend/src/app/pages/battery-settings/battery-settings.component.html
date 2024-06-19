@@ -5,7 +5,7 @@
     @if (battery) {
       <div class="app-layout__settings-info">
         <div>
-          <app-control-button [item]="{label: 'Voltage', value: battery.voltage ? battery.voltage : 0}" (valueSubmitted)="handleValueSubmitted($event)"/>
+          <app-number-input [item]="{label: 'Voltage', value: battery.voltage ? battery.voltage : 0}" (valueSubmitted)="handleValueSubmitted($event)"/>
         </div>
       </div>
       <div class="app-layout__settings-battery">
