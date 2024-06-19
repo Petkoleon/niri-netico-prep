@@ -2,12 +2,12 @@ image: atlassian/default-image:latest
 
 pipelines:
   default:
-    - parallel: 
+    - parallel:
         - step:
             name: Build and Test
             runs-on:
-              - self.hosted
-              - linux.arm64
+              - 'self.hosted'
+              - 'linux.arm64'
             caches:
               - maven
             script:
