@@ -6,7 +6,8 @@ pipelines:
         - step:
             name: Build and Test
             runs-on:
-              - windows
+              - self.hosted
+              - linux.arm64
             caches:
               - maven
             script:
