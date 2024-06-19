@@ -1,0 +1,23 @@
+@import './variables';
+
+:root {
+  --text-color: #010101;
+  --background-color: #ffffff;
+  --border-color: #F5F5F5;
+  --box-shadow-first-color: #D6D6D6;
+  --box-shadow-second-color: #E0E0E0;
+  --dropdown-active-background-color: #EEEEEE;
+  --input-disabled-background-color: #E9ECEF;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: $base-font-family;
+}

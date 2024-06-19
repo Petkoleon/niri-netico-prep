@@ -1,0 +1,30 @@
+@import "variables";
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-alice-blue;
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  &__border {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    border: 2px solid $color-solitude;
+    padding: 0.2rem 1rem;
+    height: 2.4rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__board {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+  }
+}

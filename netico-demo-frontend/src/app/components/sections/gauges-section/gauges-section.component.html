@@ -1,0 +1,28 @@
+<div class="gauges-wrapper">
+  <div class="gauges-wrapper_gauges">
+    <app-battery-info [battery]="selectedBattery!"/>
+    <ngx-gauge
+      [type]="gaugeType"
+      [thick]="10"
+      [min]="0"
+      [max]="10"
+      [value]="selectedBattery?.voltage!"
+      [cap]="'butt'"
+      [label]="'Voltage'"
+      [append]="'V'"
+      [markers]="voltageMarkerConfig"/>
+
+    <ngx-gauge
+      [type]="gaugeType"
+      [thick]="10"
+      [min]="0"
+      [max]="5"
+      [value]="selectedBattery?.chargingCurrent!"
+      [cap]="'butt'"
+      [label]="'Current'"
+      [append]="'A'"
+      [markers]="currentMarkerConfig"/>
+    <app-battery-settings-button (onBatterySettings)="batterySetting()" [selectedBatteryId]="selectedBattery?.id"/>
+  </div>
+  <p>Battery {{ selectedBattery?.id }}</p>
+</div>

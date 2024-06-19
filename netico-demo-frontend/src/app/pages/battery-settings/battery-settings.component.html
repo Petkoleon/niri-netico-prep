@@ -1,0 +1,28 @@
+<div class="app-layout">
+  <app-title-section [title]="title"/>
+  <div class="app-layout__link"><a routerLink="/">Return to Dashboard</a></div>
+  <div class="app-layout__settings">
+    @if (battery) {
+      <div class="app-layout__settings-info">
+        <div>
+          <app-number-input [item]="{label: 'Voltage', value: battery.voltage ? battery.voltage : 0}" (valueSubmitted)="handleValueSubmitted($event)"/>
+        </div>
+      </div>
+      <div class="app-layout__settings-battery">
+        <div class="app-layout__settings-battery-cap"></div>
+        <div class="app-layout__settings-battery-state">
+          <p>{{ battery.stateOfCharge | number }}%</p>
+          <div
+            class="app-layout__settings-battery-state-level"
+            [style.height]="battery.stateOfCharge + '%'"
+            [style.background-color]="battery.stateOfCharge! < 50 ? 'red' : 'green'"
+          >
+          </div>
+        </div>
+      </div>
+    } @else {
+      <p>Loading battery data...</p>
+    }
+  </div>
+
+</div>
