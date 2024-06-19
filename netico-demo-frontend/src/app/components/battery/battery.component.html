@@ -1,0 +1,7 @@
+<button class="battery-wrapper" [class.battery-wrapper-active]="batterySelected" (click)="batterySelectionHandler()">
+  <p class="battery-wrapper__title">Battery {{ battery?.id }}</p>
+  <div class="battery-wrapper__battery">
+    <img ngSrc="/images/battery.svg" alt="Battery" height="120" width="120" class="battery-wrapper__icon" priority>
+  </div>
+  <div class="battery-wrapper__signal" [class.battery-wrapper__signal-active]="batterySelected"></div>
+</button>

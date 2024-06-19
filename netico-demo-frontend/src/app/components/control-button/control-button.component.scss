@@ -1,0 +1,96 @@
+@import "variables";
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1rem;
+
+  &__input {
+    border: 1px solid $color-gossamer;
+    background-color: $color-white-smoke;
+    display: inline-flex;
+  }
+
+  &__input,
+  &__input * {
+    box-sizing: border-box;
+  }
+
+  &__input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: $color-gossamer;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+  }
+
+  &__input button:before,
+  &__input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 3px;
+    background-color: $color-dim-gray;
+    transform: translate(-50%, -50%);
+  }
+  &__input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &__input button:active:before,
+  &__input button:active:after {
+    background-color: $color-gossamer;
+  }
+
+  &__input input[type=number] {
+    max-width: 4rem;
+    padding: .5rem;
+    background-color: $color-white-smoke;
+    border: solid $color-gossamer;
+    border-width: 0 2px;
+    font-size: 1rem;
+    height: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__submit {
+    cursor: pointer;
+    height: 2rem;
+    width: 10rem;
+    background-color: $color-white-smoke;
+    border-radius: 0.5rem;
+    border: 1px solid $color-gossamer;
+  }
+
+  &__submit:disabled {
+    cursor: not-allowed;
+  }
+
+  &__submit:not(:disabled):hover {
+    border: 2px solid $color-gossamer;
+    background-color: white;
+  }
+}
+
+

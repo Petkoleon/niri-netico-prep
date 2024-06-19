@@ -1,0 +1,16 @@
+<form [formGroup]="numberForm" (ngSubmit)="onUpdateValue()" class="number-input-wrapper">
+  <label [for]="item.label">{{ item.label }}</label>
+  <div class="number-input-wrapper__input">
+    <button type="button" (click)="decrementData()"></button>
+    <input [id]="item.label"
+           class="value"
+           min="0.00"
+           name="value"
+           type="number"
+           formControlName="numberInput"
+    />
+    <button type="button" (click)="incrementData()" class="plus"></button>
+  </div>
+  <button type="submit" class="number-input-wrapper__submit" [disabled]="isFormUnchanged()">UPDATE {{ item.label }}</button>
+</form>
+

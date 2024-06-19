@@ -1,0 +1,16 @@
+.control-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: .25rem;
+  width: 5rem;
+  height: 5rem;
+
+  p {
+    margin: 0;
+  }
+  p:last-child {
+    font-size: 0.8rem;
+    margin-top: auto;
+  }
+}

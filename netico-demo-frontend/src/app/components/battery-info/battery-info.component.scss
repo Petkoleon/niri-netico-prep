@@ -1,0 +1,17 @@
+@import "variables";
+
+.battery-info {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  background: $color-white-smoke;
+  color: $color-dim-gray;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  border: 2px solid $color-pattens-blue;
+  padding: 0.8rem;
+
+  p {
+    margin: 0;
+    padding: 0.25rem 0;
+  }
+}

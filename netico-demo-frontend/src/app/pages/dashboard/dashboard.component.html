@@ -1,0 +1,9 @@
+<div class="app-layout">
+  <app-title-section [title]="'Status'"/>
+  <div class="app-layout__board">
+    <div class="app-layout__board-flow"></div>
+    <app-batteries-section [slice]="[0, 5]" class="app-layout__board-batteries"/>
+    <app-gauges-section class="app-layout__board-gauges"/>
+    <app-batteries-section [slice]="[5, 10]" class="app-layout__board-batteries"/>
+  </div>
+</div>

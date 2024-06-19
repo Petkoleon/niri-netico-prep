@@ -1,0 +1,29 @@
+@import "variables";
+
+.battery-settings-button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.1rem 0.25rem;
+  width: 12rem;
+  height: 3rem;
+  border: 1px solid $color-gossamer;
+  border-radius: 1rem;
+  background-color: $color-white-smoke;
+  cursor: pointer;
+  color: $color-gossamer;
+
+  fa-icon {
+    height: 2rem;
+    max-width: 2rem;
+    border: none;
+  }
+}
+
+.battery-settings-button:hover {
+  border: 2px solid $color-gossamer;
+  background-color: white;
+}

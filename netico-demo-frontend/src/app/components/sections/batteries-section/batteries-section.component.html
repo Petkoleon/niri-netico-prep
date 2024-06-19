@@ -1,0 +1,9 @@
+<section class="batteries-wrapper">
+  @for (battery of batteries; track battery.id) {
+    <app-battery
+      [battery]="battery"
+      [batterySelected]="battery.id === batterySelected"
+      (setSelectedBattery)="batterySelectionHandler($event)"
+    />
+  }
+</section>
