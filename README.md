@@ -64,7 +64,8 @@ https://bitbucket.org/blog/announcing-support-for-linux-arm-runners-in-bitbucket
 
 
 ### How to build Java native application
-//todo: add content
+In order to build Java native application for Windows (.exe), navigate to the root of "niri-netico-prep" project and run the following command:
+**.\mvnw -Pnative package**. It will build .exe file in the netico-demo-backend target folder, which you can simply open on Windows and the application will run instantly.
 
 
 ### How to optimize Java application build with native build tools
