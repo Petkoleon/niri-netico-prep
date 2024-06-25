@@ -25,10 +25,10 @@ public class Battery {
     @Column(name = "voltage", precision = 5, scale = 2)
     private BigDecimal voltage;
 
-    @Column(name = "chargingCurrent", precision = 5, scale = 2)
+    @Column(name = "charging_current", precision = 5, scale = 2)
     private BigDecimal chargingCurrent;
 
-    @Column(name = "stateOfCharge", precision = 5, scale = 2)
+    @Column(name = "state_of_charge", precision = 5, scale = 2)
     private BigDecimal stateOfCharge;
 
     @Column(name = "temperature", precision = 5, scale = 2)

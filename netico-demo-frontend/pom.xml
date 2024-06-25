@@ -11,11 +11,55 @@
   </parent>
 
   <artifactId>netico-demo-frontend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <name>Netico Demo :: Frontend</name>
-  <packaging>pom</packaging>
 
   <build>
+    <resources>
+      <resource>
+        <directory>./dist/browser</directory>
+        <targetPath>static</targetPath>
+      </resource>
+    </resources>
+
     <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.15.0</version>
+        <configuration>
+          <workingDirectory>./</workingDirectory>
+          <nodeVersion>v20.10.0</nodeVersion>
+          <npmVersion>10.2.4</npmVersion>
+        </configuration>
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install --legacy-peer-deps</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm run build</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run build</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
@@ -29,10 +73,6 @@
             </fileset>
           </filesets>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.github.eirslett</groupId>
-        <artifactId>frontend-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

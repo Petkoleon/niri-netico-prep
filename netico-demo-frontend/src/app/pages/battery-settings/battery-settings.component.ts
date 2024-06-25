@@ -1,7 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {TitleSectionComponent} from "@components/sections/title-section/title-section.component";
-import {Store} from "@ngrx/store";
-import {AppState} from "../../store/app.reducer";
 import {BaseComponent} from "@core/directives/base-component.directive";
 import {BatteryService} from "@api/services/battery.service";
 import {ActivatedRoute, RouterLink} from "@angular/router";
@@ -25,7 +23,6 @@ import {NumberInputComponent} from "@components/number-input/number-input.compon
 })
 export class BatterySettingsComponent extends BaseComponent implements OnInit {
   #route = inject(ActivatedRoute);
-  #store = inject(Store<AppState>);
   #batteryService = inject(BatteryService);
   battery: Battery;
   title: string = "Battery Settings";

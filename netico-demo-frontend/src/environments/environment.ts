@@ -4,6 +4,6 @@
 
 export const environment = {
 	production: false,
-	apiBasePath: '/api',
+	apiBasePath: '/api/v1',
 	configPath: './assets/configuration/config'
 };

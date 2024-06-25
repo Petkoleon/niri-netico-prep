@@ -12,7 +12,7 @@ export class BatteryService {
   }
 
   getBatteries(): Observable<Battery[]> {
-    return this.httpClientWrapper.executeGET<Battery[]>(`/${this.SERVICE_ROOT}/battery-data`)
+    return this.httpClientWrapper.executeGET<Battery[]>(`/battery`)
       .pipe(
         map((batteryData: Battery[]) => {
           return batteryData.map(battery => new BatteryModel(battery))
@@ -24,13 +24,13 @@ export class BatteryService {
     return this.httpClientWrapper.executeGET<Battery>(`/${this.SERVICE_ROOT}/${batteryId}`)
       .pipe(
         map((batteryData: Battery) => {
-          return new BatteryModel(batteryData[0])
+          return new BatteryModel(batteryData)
         })
       )
   }
 
   updateBattery(batteryId: number, battery: Battery): Observable<Battery> {
-    return this.httpClientWrapper.executePATCH<{ message: string, battery: Battery }>(`/${this.SERVICE_ROOT}/${batteryId}`, battery)
+    return this.httpClientWrapper.executePUT<{ message: string, battery: Battery }>(`/${this.SERVICE_ROOT}/${batteryId}`, battery)
       .pipe(
         map((batteryData: { message: string, battery: Battery }) => {
           return new BatteryModel(batteryData.battery);
