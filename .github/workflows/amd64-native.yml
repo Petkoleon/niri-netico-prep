@@ -25,5 +25,18 @@ jobs:
           java --version
           native-image --version
 
-      - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
+      - name: Set up Maven
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+          cache: maven
+
+      - name: Running Maven native image plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn -Pnative package -DskipTests
+
+      - name: Upload native image
+        uses: actions/upload-artifact@v4
+        with:
+          name: netico-native-demo
+          path: netico-demo-backend/target/netico-demo-backend # Adjust the path to match your artifact location
